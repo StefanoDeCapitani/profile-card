@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/*font-family: 'Kumbh Sans', sans-serif;*/
+
+:root{
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+main.container{
+  position: relative;
+  z-index: -2;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: var(--dark-cyan);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2{
+  font-size: 18px;
+  color: var(--very-dark-desaturated-blue);
+  font-weight: 700;
+  margin: 0;
+}
+
+h3{
+  font-size: 14px;
+  color: var(--dark-gray);
+  font-weight: 400;
+  margin: 5px 0;
+}
+
+h2 span{
+  margin-left: 10px;
+  color: var(--dark-gray);
+  font-weight: 400;
+}
+
+img.background{
+  position: absolute;
+  z-index: -1;
+
+  width: 70%;
+}
+
+img.background#top{
+  top: -500px;
+  left: -350px;
+}
+
+img.background#bottom{
+  right: -200px;
+  bottom: -700px;
+}
+
+div.card{
+  height: 400px;
+  width: 400px;
+
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+div.profile_infos{
+  position: relative;
+  text-align: center;
+}
+
+div.profile_infos h2{
+  margin-top: 65px;
+}
+
+div.profile_infos img.profile_image{
+  position: absolute;
+  top: -53px;
+  left: 50%;
+
+  transform: translate(-50%, 0);
+
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+div.stats{
+  height: 23%;
+
+  margin-top: auto;
+  padding: 0 10px;
+
+  border-top: 1px solid hsl(0, 0%, 59%, 0.2);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  text-align: center;
+}
+
+footer.attribution{
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, 0);
+
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 400px){
+
+  img.background{
+    width: 150%;
+  }
+
+  img.background#top{
+    top: -350px;
+    left: -300px;
+  }
+
+  img.background#bottom{
+    bottom: -350px;
+    right: -300px;
+  }
+
+  div.card{
+    width: 319px;
+  }
+}
